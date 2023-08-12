@@ -46,6 +46,12 @@ app.get("/test", async (req, res) => {
         select: {
           id: true,
           content: true,
+          owner: {
+            select: {
+              id: true,
+              name: true,
+            },
+          },
         },
       },
     },
