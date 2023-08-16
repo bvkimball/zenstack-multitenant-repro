@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan("tiny"));
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({ log: ["info"] });
 app.use(
   "/api",
   ZenStackMiddleware({
@@ -22,7 +22,7 @@ app.use(
   })
 );
 
-app.get("/test", async (req, res) => {
+app.get("/test-nested", async (req, res) => {
   const client = withPresets(
     prisma,
     {
@@ -52,6 +52,36 @@ app.get("/test", async (req, res) => {
               name: true,
             },
           },
+        },
+      },
+    },
+  });
+
+  res.json(result);
+});
+
+app.get("/test-overwrite", async (req, res) => {
+  const client = withPresets(
+    prisma,
+    {
+      user: { id: req.header("X-USER-ID") },
+    },
+    { logPrismaQuery: true }
+  );
+
+  const result = await client.comment.findMany({
+    where: {
+      owner: {
+        name: "Bryan",
+      },
+    },
+    select: {
+      id: true,
+      content: true,
+      owner: {
+        select: {
+          id: true,
+          name: true,
         },
       },
     },
