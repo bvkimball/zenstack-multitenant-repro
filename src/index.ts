@@ -90,6 +90,19 @@ app.get("/test-overwrite", async (req, res) => {
   res.json(result);
 });
 
+app.get("/test-shared", async (req, res) => {
+  const client = withPresets(
+    prisma,
+    {
+      user: { id: req.header("X-USER-ID") },
+    },
+    { logPrismaQuery: true }
+  );
+
+  const result = await client.integration.findMany();
+  res.json(result);
+});
+
 app.use((req, res, next) => {
   const userId = req.header("X-USER-ID");
   if (!userId) {

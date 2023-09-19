@@ -108,6 +108,18 @@ const userData: Prisma.UserCreateInput[] = [
   },
 ];
 
+const integrationData: Prisma.IntegrationCreateInput[] = [
+  {
+    name: "Google",
+  },
+  {
+    name: "Microsoft",
+  },
+  {
+    name: "Github",
+  },
+];
+
 async function main() {
   console.log(`Start seeding ...`);
   for (const u of userData) {
@@ -115,6 +127,11 @@ async function main() {
       data: u,
     });
     console.log(`Created user with id: ${user.id}`);
+  }
+  for (const it of integrationData) {
+    await prisma.integration.create({
+      data: it,
+    });
   }
   console.log(`Seeding finished.`);
 }

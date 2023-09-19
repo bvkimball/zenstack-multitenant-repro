@@ -18,6 +18,7 @@ model User {
     posts Post[]
     groups Group[]
     comments Comment[]
+    installedIntegrations InstalledIntegration[]
     // can be created by anyone, even not logged in
     @@allow('create', true)
     // can be read by users in the same organization
@@ -36,6 +37,7 @@ model Organization {
     post Post[]
     groups Group[]
     comments Comment[]
+    installedIntegrations InstalledIntegration[]
 
     // everyone can create a organization
     @@allow('create', true)
@@ -102,7 +104,25 @@ model Group {
     comments Comment[]
     org Organization @relation(fields: [orgId], references: [id])
     orgId String
+    installedIntegrations InstalledIntegration[]
 
     // group is shared by organization
     @@allow('all', org.members?[auth() == this])
+}
+
+
+model Integration {
+    id String @id @default(uuid())
+    name String
+    installedIntegration InstalledIntegration[]
+
+    // available integrations is shared by all organizations
+    @@deny('all', auth() == null)
+}
+
+// installed integrations are available only to an organization user
+model InstalledIntegration extends organizationBaseEntity {
+    integration Integration @relation(fields: [integrationId], references: [id])
+    integrationId String
+    settings String?
 }

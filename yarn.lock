@@ -604,33 +604,34 @@
     "@types/mime" "*"
     "@types/node" "*"
 
-"@zenstackhq/language@1.0.0-beta.17":
-  version "1.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@zenstackhq/language/-/language-1.0.0-beta.17.tgz#6644ae15b55fc129e831aa5400c8201ea8788b68"
-  integrity sha512-DUGAUKj+/6S3zy1PNqbdAdF+zqcQ8+pnKQDuyJ7G9wE7MAJeVqcliatz+VaYBf373DCaXcGS00m4tdAuxVumcg==
+"@zenstackhq/language@1.0.0-beta.21":
+  version "1.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/@zenstackhq/language/-/language-1.0.0-beta.21.tgz#a8e9630dbde4fb01153410a8738fddd4a42c50c6"
+  integrity sha512-NliLr1VTh0puYdPIJKTb7TlsosD/f9m+gmV34AQp7xb9/GHIKu7RTiu2fEoxYaj9abwMdA76ldDTgUJJwMA4yw==
   dependencies:
     langium "1.2.0"
 
-"@zenstackhq/openapi@1.0.0-beta.17":
-  version "1.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@zenstackhq/openapi/-/openapi-1.0.0-beta.17.tgz#48b6cca353809e653df24b7e28dcf20ed53344bb"
-  integrity sha512-9s0VpPQHaaADBcwalu+yNl8Y8Tzz/xaBraQY0dclUe7113w6BexhbGLmq4CGhtaYM057JY2k/3xHi+kV/COIQw==
+"@zenstackhq/openapi@1.0.0-beta.21":
+  version "1.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/@zenstackhq/openapi/-/openapi-1.0.0-beta.21.tgz#3a1dac0eb0d0af803d55bf5021065c5d99a2185c"
+  integrity sha512-2u2zYpgL5/prk6oeNFK2tNwMTALFH7mci6L2lMUoXF+GqDN58XKA/qEYK9jrVTlNL9Fldm1iKZLoufmVH5IUFg==
   dependencies:
     "@prisma/generator-helper" "^5.0.0"
-    "@zenstackhq/runtime" "1.0.0-beta.17"
-    "@zenstackhq/sdk" "1.0.0-beta.17"
+    "@zenstackhq/runtime" "1.0.0-beta.21"
+    "@zenstackhq/sdk" "1.0.0-beta.21"
     change-case "^4.1.2"
     lower-case-first "^2.0.2"
     openapi-types "^12.1.0"
     tiny-invariant "^1.3.1"
+    upper-case-first "^2.0.2"
     yaml "^2.2.1"
     zod "3.21.1"
     zod-validation-error "^0.2.1"
 
-"@zenstackhq/runtime@1.0.0-beta.17", "@zenstackhq/runtime@^1.0.0-beta.17":
-  version "1.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@zenstackhq/runtime/-/runtime-1.0.0-beta.17.tgz#8f60566ebc4fd40e312aa24e605e5cec7feade4f"
-  integrity sha512-KeFerERLCtgYaZDdIx0T/8h0SNRTheDeOGJJz5NKvDrg0vRhKr6sfqtpXxRRyVs8HH1hGJIcsxDpXhH4oNfI5A==
+"@zenstackhq/runtime@1.0.0-beta.21", "@zenstackhq/runtime@^1.0.0-beta.21":
+  version "1.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/@zenstackhq/runtime/-/runtime-1.0.0-beta.21.tgz#c923b552ca706c12853530d59a9c2a597ba5489b"
+  integrity sha512-y3+SErFUjlyDl+LyAGJMbFrmxL61ahExBMtf+7I7Y0GoNzH1IKhu59BKk7OtbR36+HiwfTrTvhlHumGafrOZjg==
   dependencies:
     "@types/bcryptjs" "^2.4.2"
     bcryptjs "^2.4.3"
@@ -648,27 +649,28 @@
     zod "3.21.1"
     zod-validation-error "^0.2.1"
 
-"@zenstackhq/sdk@1.0.0-beta.17":
-  version "1.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@zenstackhq/sdk/-/sdk-1.0.0-beta.17.tgz#96a6e48649e1f71a20174f356c4c37a6f7634364"
-  integrity sha512-6SI+aRfA8axAHLhN/lcRHeYjNqgudIopH8MuSrSLRuJH4ugCi6u22ETlyZ7uTOxO2frkzP3FE0gMUp3dL2Kb6Q==
+"@zenstackhq/sdk@1.0.0-beta.21":
+  version "1.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/@zenstackhq/sdk/-/sdk-1.0.0-beta.21.tgz#881843f44ba5405b77bcc1153b3ec83c283bce53"
+  integrity sha512-NyrIjtmOT8I9CDBg5+DNpC+M7bjI18m1DIKaR2Aiia6EbnsAKGQtC73viPNoI6jtADCHoqmhnAsIprYFH7e1EQ==
   dependencies:
     "@prisma/generator-helper" "^5.0.0"
     "@prisma/internals" "4.10.0"
     "@prisma/internals-v5" "npm:@prisma/internals@^5.0.0"
-    "@zenstackhq/language" "1.0.0-beta.17"
-    "@zenstackhq/runtime" "1.0.0-beta.17"
+    "@zenstackhq/language" "1.0.0-beta.21"
+    "@zenstackhq/runtime" "1.0.0-beta.21"
     prettier "^2.8.3"
     semver "^7.3.8"
     ts-morph "^16.0.0"
+    upper-case-first "^2.0.2"
 
-"@zenstackhq/server@^1.0.0-beta.17":
-  version "1.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/@zenstackhq/server/-/server-1.0.0-beta.17.tgz#a2d9f645597edac8a9f40ac0025b55a62d26c4f8"
-  integrity sha512-AjkobPBGWZEU8wq1r31zqjOK6S22euL+yi5qHcjCneyzzDPILf128fvTpw9HnoieABBE0TpCC7NHL1d6nMSuow==
+"@zenstackhq/server@^1.0.0-beta.21":
+  version "1.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/@zenstackhq/server/-/server-1.0.0-beta.21.tgz#e5996d9c76116fd0d03fead37e1bde8f2a0913f6"
+  integrity sha512-+a8t6zPp414GQCvYgIoMVSoGsxlA1pSL9SyS4tmi3WrfebyMqbmRXKcCzlTz/uDYLAs+C1E5yb8F83+SgVdPuQ==
   dependencies:
-    "@zenstackhq/openapi" "1.0.0-beta.17"
-    "@zenstackhq/runtime" "1.0.0-beta.17"
+    "@zenstackhq/openapi" "1.0.0-beta.21"
+    "@zenstackhq/runtime" "1.0.0-beta.21"
     change-case "^4.1.2"
     lower-case-first "^2.0.2"
     superjson "^1.11.0"
@@ -3380,15 +3382,15 @@ yocto-queue@^0.1.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 
-zenstack@^1.0.0-beta.17:
-  version "1.0.0-beta.17"
-  resolved "https://registry.yarnpkg.com/zenstack/-/zenstack-1.0.0-beta.17.tgz#c887103834c4b5f8f0c4c57187e60f7fffac2349"
-  integrity sha512-zZflOBf5ju/ssU8uh8KaffDcaaSENIj6WNAB1za/+OH8nZ8ADlUmr0iuAJ9k80HHgr95AJlCgTVgJhgyu9FNSA==
+zenstack@^1.0.0-beta.21:
+  version "1.0.0-beta.21"
+  resolved "https://registry.yarnpkg.com/zenstack/-/zenstack-1.0.0-beta.21.tgz#1ab8efe2999d5efd9bc68ab81cddf19e543faeaf"
+  integrity sha512-OWX9cafIGYo6tYbOCXj8W2wIFyiOpfBC35sb8aIXpQj13vkzwtbR7VhU3x1d3C06D0ariK0jM1Ct2HR1X7TLBg==
   dependencies:
     "@paralleldrive/cuid2" "^2.2.0"
     "@prisma/generator-helper" "^5.0.0"
-    "@zenstackhq/language" "1.0.0-beta.17"
-    "@zenstackhq/sdk" "1.0.0-beta.17"
+    "@zenstackhq/language" "1.0.0-beta.21"
+    "@zenstackhq/sdk" "1.0.0-beta.21"
     async-exit-hook "^2.0.1"
     change-case "^4.1.2"
     colors "1.4.0"
